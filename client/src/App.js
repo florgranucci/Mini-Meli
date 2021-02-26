@@ -116,6 +116,7 @@ export const App = () => {
     pageNumbers.push(i);
   }
  */
+
   return (
     <div>
       <Navbar onSearch={onSearch} />
