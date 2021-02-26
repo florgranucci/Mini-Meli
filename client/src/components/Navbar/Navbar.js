@@ -1,0 +1,23 @@
+import { AppBar, Toolbar, Typography } from "@material-ui/core";
+import useStyles from "./styles";
+
+import Searchbar from "./Searchbar/Searchbar";
+
+const Navbar = ({ onSearch }) => {
+  const classes = useStyles();
+
+  return (
+    <>
+      <AppBar position="sticky" className={classes.root}>
+        <Toolbar>
+          <Typography className={classes.title} variant="h6" noWrap>
+            MINI-MELI
+          </Typography>
+          <Searchbar onSearch={onSearch} />
+        </Toolbar>
+      </AppBar>
+    </>
+  );
+};
+
+export default Navbar;
