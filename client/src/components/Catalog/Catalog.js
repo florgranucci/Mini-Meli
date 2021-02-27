@@ -21,7 +21,7 @@ const CatalogContainer = ({
         handleCondition={handleCondition}
         handlePrice={handlePrice}
       />
-      <Container maxWidth="xl">
+      <Container maxWidth="lg">
         <Grid
           container
           direction="column"

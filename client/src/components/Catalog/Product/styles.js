@@ -2,43 +2,51 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles(() => ({
   card: {
-    width: 250,
-    maxWidth: 250,
-    height: 350,
-    margin: 5
+    width: "284px",
+    maxWidth: "284px",
+    margin: 5,
   },
   cardMedia: {
-      width: 200,
-      maxWidth: 200,
-      height: 150,
-      backgroundSize: 'contain'
+    width: "284px",
+    maxWidth: "284px",
+    height: "284px",
+    backgroundSize: "contain",
   },
   cardContent: {
-      height: 100
+    height: "173px",
   },
   price: {
-      display: 'flex',
-      width: 90,
-      justifyContent: 'space-around'
+    display: "flex",
+    alignItems: "center",
+    width: 105,
+    marginBottom: 8,
   },
-  priceStyle: {
-    fontWeight: 'bold',
+  realPrice: {
+    marginLeft: 5,
+  },
+  currency: {
+    fontSize: ".8rem",
   },
   conditionType: {
-    padding: 5,
-    fontWeight: 'bold',
-    textTransform: 'uppercase'
+    padding: 10,
+    fontWeight: "bold",
+    textTransform: "uppercase",
   },
   link: {
-    cursor: 'pointer',
-    textDecoration: 'none',
-    color: 'white',
-    backgroundColor: '#2968C8',
+    cursor: "pointer",
+    textDecoration: "none",
+    color: "white",
+    backgroundColor: "#3483FA",
     padding: 8,
+    borderRadius: 4,
+    "&:hover": {
+      backgroundColor: "#2968C8",
+    },
   },
   linkTypo: {
-    marginTop: 15
+    marginTop: 25,
   },
-  
-
+  stock: {
+    fontWeight: "bold",
+  },
 }));

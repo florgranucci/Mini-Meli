@@ -3,11 +3,9 @@ import {
   CardMedia,
   CardContent,
   Typography,
-  Button
+  Divider,
 } from "@material-ui/core";
 import useStyles from "./styles";
-
-import { Link } from 'react-router-dom';
 
 const ProductCard = ({ product }) => {
   const classes = useStyles();
@@ -22,10 +20,8 @@ const ProductCard = ({ product }) => {
     link,
   } = product;
 
-  const preventDefault = (event) => event.preventDefault();
-
   return (
-    <Card className={classes.card}>
+    <Card className={classes.card} variant="outlined">
       <Typography
         variant="body2"
         align="right"
@@ -34,25 +30,26 @@ const ProductCard = ({ product }) => {
         {condition === "new" ? "Nuevo" : "Usado"}
       </Typography>
       <CardMedia image={thumbnail} className={classes.cardMedia} />
+      <Divider />
       <CardContent className={classes.cardContent}>
-        <Typography variant="subtitle1">
-          {title.length > 20 ? title.substring(20, 0) + "..." : title}
-        </Typography>
         <div className={classes.price}>
-          <Typography variant="body1" className={classes.priceStyle}>
-            {currency_id}
-          </Typography>
-          <Typography variant="body1" className={classes.priceStyle}>
+          <Typography className={classes.currency}>{currency_id}</Typography>
+          <Typography variant="h6" className={classes.realPrice}>
             ${price}
           </Typography>
         </div>
+        <Typography variant="body2" gutterBottom>
+          {title.length > 60 ? title.substring(60, 0) + "..." : title}
+        </Typography>
         <Typography variant="caption" className={classes.stock}>
           Stock disponible: {stock} unidades
         </Typography>
-        <Typography variant='body1' className={classes.linkTypo}>
-          <a href={link}  target="_blank" className={classes.link}>Ver producto</a>
+        <Typography variant="body1" className={classes.linkTypo}>
+          <a href={link} target="_blank" className={classes.link}>
+            Ver producto
+          </a>
         </Typography>
-     </CardContent>
+      </CardContent>
     </Card>
   );
 };
