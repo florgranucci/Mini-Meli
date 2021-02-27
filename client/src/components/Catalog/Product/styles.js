@@ -18,10 +18,27 @@ export default makeStyles(() => ({
   },
   price: {
       display: 'flex',
-      marginTop: 7
+      width: 90,
+      justifyContent: 'space-around'
   },
-  condition: {
-    margin: 8
-  }
+  priceStyle: {
+    fontWeight: 'bold',
+  },
+  conditionType: {
+    padding: 5,
+    fontWeight: 'bold',
+    textTransform: 'uppercase'
+  },
+  link: {
+    cursor: 'pointer',
+    textDecoration: 'none',
+    color: 'white',
+    backgroundColor: '#2968C8',
+    padding: 8,
+  },
+  linkTypo: {
+    marginTop: 15
+  },
+  
 
 }));

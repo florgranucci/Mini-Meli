@@ -4,9 +4,9 @@ export default makeStyles((theme) => ({
   search: {
     position: "relative",
     borderRadius: theme.shape.borderRadius,
-    backgroundColor: fade(theme.palette.common.white, 0.15),
+    backgroundColor: '#f5f5f5',
     "&:hover": {
-      backgroundColor: fade(theme.palette.common.white, 0.25),
+      backgroundColor: '#f5f5f5',
     },
     marginLeft: 0,
     width: "100%",
@@ -32,15 +32,15 @@ export default makeStyles((theme) => ({
     // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
     transition: theme.transitions.create("width"),
-    width: "100%",
+    width: 500,
     [theme.breakpoints.up("sm")]: {
-      width: "12ch",
+      width: "20ch",
       "&:focus": {
-        width: "20ch",
+        width: "60ch",
       },
     },
   },
   inputRoot: {
-    color: 'grey',
+    color: 'black',
   },
 }));

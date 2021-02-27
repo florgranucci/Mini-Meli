@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Navbar, Catalog } from "./components";
 
 export const App = () => {
@@ -118,6 +119,7 @@ export const App = () => {
  
 
   return (
+    <Router>
     <div>
       <Navbar onSearch={onSearch} />
       <Catalog 
@@ -130,6 +132,7 @@ export const App = () => {
       totalPages={pageNumbers.length}
       />
     </div>
+    </Router>
   );
 };
 
