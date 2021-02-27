@@ -14,5 +14,9 @@ export default makeStyles(() => ({
     textDecoration: "none",
     color: "black",
   },
+  logo: {
+    height: 40,
+    marginLeft: 5
+  }
 
 }));
