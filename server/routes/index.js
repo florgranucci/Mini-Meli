@@ -45,7 +45,7 @@ server.get('/search', cache(60), (req, res) => {
                 condition: p.condition,
                 stock: p.available_quantity,
                 thumbnail: p.thumbnail,
-                link: p.link
+                link: p.permalink
             })
         })
         return res.send(products)
@@ -96,7 +96,7 @@ server.get('/products', cache(60), (req, res) => {
                 condition: p.condition,
                 stock: p.available_quantity,
                 thumbnail: p.thumbnail,
-                link: p.link
+                link: p.permalink
             })
         })
         return res.send(proByCategory)
