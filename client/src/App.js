@@ -14,8 +14,8 @@ export const App = () => {
   const [condition, setCondition] = useState();
   const [price, setPrice] = useState();
 
-  /* const [productsPerPage] = useState(16);
-  const [currentPage, setCurrentPage] = useState(1); */
+  const [productsPerPage] = useState(16);
+  const [currentPage, setCurrentPage] = useState(1); 
 
   // get products via searchbar
   const onSearch = (input) => {
@@ -104,7 +104,7 @@ export const App = () => {
     );
   }, [price]);
 
-  /* const paginate = (pageNumber) => {
+   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
 
@@ -115,17 +115,19 @@ export const App = () => {
   for (let i = 1; i <= Math.ceil(products.length / productsPerPage); i++) {
     pageNumbers.push(i);
   }
- */
+ 
 
   return (
     <div>
       <Navbar onSearch={onSearch} />
       <Catalog 
-      products={products} 
+      products={allProducts} 
       categories={categories} 
       handleCondition={handleCondition}
       handlePrice={handlePrice}
       handleCategory={handleCategory}
+      paginate={paginate}
+      totalPages={pageNumbers.length}
       />
     </div>
   );
