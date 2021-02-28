@@ -1,6 +1,6 @@
 
 
-Labs Challenge
+##Labs Challenge
 
 El objetivo de este challenge fue construir un Front-End y un Back-End que interactuen con una API externa.
 
