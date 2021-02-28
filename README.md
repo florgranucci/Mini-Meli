@@ -8,3 +8,25 @@ Se utilizó la API pública de Mercado Libre. Se extrajo publicaciones que se gu
 
 ![mini-meli-1](https://i.ibb.co/k2zMFTN/Captura.png)
 ![mini-meli-2](https://i.ibb.co/bPdJdC2/Capturar.png)
+
+
+Componentes:
+
+**SearchBar**
+Un formulario controlado con un input de búsqueda, que dispara los requests a la API.
+
+**Product Card**
+En este componente se muestra un producto en particular, se muestra:
+
+*su imagen.
+*su titulo.
+*su precio (con la moneda).
+*su condicion.
+*si tiene stock o no.
+
+**Catalogo**
+Este componente muestra un arreglo de productos usando Product Card. Tambien posibilita:
+
+*Poder ordenar los productos en base a su precio, de forma ascendete o descendente.
+*Poder filtrar por condicion.
+*Poder páginar los resultados de a 30 productos por página.
