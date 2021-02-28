@@ -18,11 +18,11 @@ Un formulario controlado con un input de búsqueda, que dispara los requests a l
 **Product Card**
 En este componente se muestra un producto en particular, se muestra:
 ```
-su imagen.
-su titulo.
-su precio (con la moneda).
-su condicion.
-si tiene stock o no.
+Su imagen.
+Su titulo.
+Su precio (con la moneda).
+Su condicion.
+Si tiene stock o no.
 ```
 
 **Catalogo**
