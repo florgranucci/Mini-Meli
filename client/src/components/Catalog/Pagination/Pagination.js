@@ -25,6 +25,7 @@ const PagesControl = ({ totalPages, paginate }) => {
         onChange={handleChange}
         className={classes.root}
         size="large"
+        color='primary'
       />
     </>
   );

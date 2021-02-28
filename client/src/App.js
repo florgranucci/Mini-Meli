@@ -69,6 +69,18 @@ export const App = () => {
       });
   }, [category]);
 
+  //default products
+  useEffect(() => {
+     axios
+      .get(`${URL}/api/products?category=MLA1144`)
+      .then((res) => {
+        setProducts(res.data);
+        setProConditions(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
  
   // filter by condition
   useEffect(() => {
