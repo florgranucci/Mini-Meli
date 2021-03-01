@@ -20,6 +20,7 @@ export const App = () => {
 
   // get products via searchbar
   const onSearch = (input) => {
+    setCurrentPage(1)
     axios
       .get(`${URL}/api/search?q=${input}`)
       .then((res) => {
@@ -84,6 +85,7 @@ export const App = () => {
  
   // filter by condition
   useEffect(() => {
+    setCurrentPage(1);
     if (condition === "new" || condition === "used") {
       setCondition(condition);
       setProducts(
@@ -93,10 +95,12 @@ export const App = () => {
       setCondition(condition);
       setProducts(proConditions);
     }
+
   }, [condition]);
 
   // filter by price
   useEffect(() => {
+    setCurrentPage(1);
     setProducts(
       products &&
         products
@@ -115,8 +119,9 @@ export const App = () => {
               : -1
           )
     );
-  }, [price]);
+  }, [price])
 
+  
    const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
   };

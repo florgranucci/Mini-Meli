@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Pagination } from "@material-ui/lab";
-import yellow from "@material-ui/core/colors/yellow";
 
 import useStyles from "./styles";
 

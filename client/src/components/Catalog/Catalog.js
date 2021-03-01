@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Filter from "./Filter/Filter";
 import Product from "./Product/Product";
@@ -24,7 +24,7 @@ const CatalogContainer = ({
   paginate,
 }) => {
   const classes = useStyles();
-  const [dense, setDense] = useState(true);
+  const [dense] = useState(true);
 
   return (
     <Container maxWidth="lg" className={classes.root}>

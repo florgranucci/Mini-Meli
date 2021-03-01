@@ -27,7 +27,7 @@ const ProductCard = ({ product }) => {
           variant="body2"
           align="right"
           className={classes.conditionType}
-          style={{ color: "green" }}
+          style={{ color: "#64dd17" }}
         >
           Nuevo
         </Typography>
@@ -36,7 +36,7 @@ const ProductCard = ({ product }) => {
           variant="body2"
           align="right"
           className={classes.conditionType}
-          style={{ color: "orange" }}
+          style={{ color: "#ff6d00" }}
         >
           Usado
         </Typography>
