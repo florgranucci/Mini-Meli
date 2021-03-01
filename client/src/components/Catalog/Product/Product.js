@@ -22,13 +22,25 @@ const ProductCard = ({ product }) => {
 
   return (
     <Card className={classes.card} variant="outlined">
-      <Typography
-        variant="body2"
-        align="right"
-        className={classes.conditionType}
-      >
-        {condition === "new" ? "Nuevo" : "Usado"}
-      </Typography>
+      {condition === "new" ? (
+        <Typography
+          variant="body2"
+          align="right"
+          className={classes.conditionType}
+          style={{ color: "green" }}
+        >
+          Nuevo
+        </Typography>
+      ) : (
+        <Typography
+          variant="body2"
+          align="right"
+          className={classes.conditionType}
+          style={{ color: "orange" }}
+        >
+          Usado
+        </Typography>
+      )}
       <CardMedia image={thumbnail} className={classes.cardMedia} />
       <Divider />
       <CardContent className={classes.cardContent}>

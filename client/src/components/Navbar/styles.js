@@ -13,6 +13,8 @@ export default makeStyles(() => ({
     display: "flex",
     textDecoration: "none",
     color: "black",
+    font:
+      "'Harabara Mais','BlinkMacSystemFont','Segoe UI','Roboto','Helvetica Neue','Arial','Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji'",
   },
   logo: {
     height: 40,

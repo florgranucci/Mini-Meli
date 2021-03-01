@@ -7,9 +7,8 @@ export default makeStyles(() => ({
     margin: 5,
   },
   cardMedia: {
-    width: "284px",
-    maxWidth: "284px",
-    height: "284px",
+    height: '173px',
+    backgroundRepeat: 'no-repeat',
     backgroundSize: "contain",
   },
   cardContent: {

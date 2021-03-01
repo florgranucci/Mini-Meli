@@ -15,7 +15,7 @@ export const App = () => {
   const [condition, setCondition] = useState();
   const [price, setPrice] = useState();
 
-  const [productsPerPage] = useState(16);
+  const [productsPerPage] = useState(9);
   const [currentPage, setCurrentPage] = useState(1); 
 
   // get products via searchbar
@@ -44,16 +44,16 @@ export const App = () => {
   }, []);
 
   
-  const handleCondition = (e) => {
-    setCondition(e.target.value);
+  const handleCondition = (value) => {
+    setCondition(value);
   };
   
-  const handlePrice = (e) => {
-    setPrice(e.target.value);
+  const handlePrice = (value) => {
+    setPrice(value);
   };
   
-  const handleCategory = (e) => {
-    setCategory(e.target.value);
+  const handleCategory = (id) => {
+    setCategory(id);
   };
 
   // get products by category
