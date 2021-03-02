@@ -11,7 +11,7 @@ Se utilizó la API pública de Mercado Libre. Se extrajo publicaciones que se gu
 
 
 
-Componentes:
+# Componentes:
 
 **SearchBar**
 Un formulario controlado con un input de búsqueda, que dispara los requests a la API.
