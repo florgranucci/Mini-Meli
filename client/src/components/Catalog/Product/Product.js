@@ -21,6 +21,7 @@ const ProductCard = ({ product }) => {
   } = product;
 
   return (
+   <a href={link} target="_blank" rel="noreferrer" className={classes.link}>
     <Card className={classes.card} variant="outlined">
       {condition === "new" ? (
         <Typography
@@ -50,19 +51,15 @@ const ProductCard = ({ product }) => {
             ${price}
           </Typography>
         </div>
-        <Typography variant="body2" gutterBottom>
+        <Typography variant="subtitle2" gutterBottom>
           {title.length > 60 ? title.substring(60, 0) + "..." : title}
         </Typography>
         <Typography variant="caption" className={classes.stock}>
           Stock disponible: {stock} unidades
         </Typography>
-        <Typography variant="body1" className={classes.linkTypo}>
-          <a href={link} target="_blank" rel="noreferrer" className={classes.link}>
-            Ver producto
-          </a>
-        </Typography>
       </CardContent>
     </Card>
+  </a>
   );
 };
 

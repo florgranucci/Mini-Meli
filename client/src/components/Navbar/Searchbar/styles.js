@@ -32,11 +32,11 @@ export default makeStyles((theme) => ({
     // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
     transition: theme.transitions.create("width"),
-    width: 500,
+    width: 900,
     [theme.breakpoints.up("sm")]: {
-      width: "20ch",
+      width: "50ch",
       "&:focus": {
-        width: "60ch",
+        width: "80ch",
       },
     },
   },

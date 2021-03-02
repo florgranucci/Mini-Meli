@@ -18,7 +18,8 @@ export default makeStyles(() => ({
   },
   logo: {
     height: 40,
-    marginLeft: 5
+    marginTop: 20,
+    marginBottom: 20
   }
 
 }));

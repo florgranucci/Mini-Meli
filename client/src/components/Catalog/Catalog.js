@@ -3,6 +3,7 @@ import { useState } from "react";
 import Filter from "./Filter/Filter";
 import Product from "./Product/Product";
 import PagesControl from "./Pagination/Pagination";
+import Header from '.././Header/Header';
 
 import useStyles from "./styles";
 import {
@@ -27,6 +28,8 @@ const CatalogContainer = ({
   const [dense] = useState(true);
 
   return (
+    <>
+    <Header />
     <Container maxWidth="lg" className={classes.root}>
       <Grid xs={3}>
         <List dense={dense} className={classes.list}>
@@ -66,6 +69,7 @@ const CatalogContainer = ({
         </Grid>
       </Grid>
     </Container>
+    </>
   );
 };
 

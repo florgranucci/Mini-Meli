@@ -4,15 +4,19 @@ export default makeStyles(() => ({
   card: {
     width: "284px",
     maxWidth: "284px",
-    margin: 5,
+    height: '473px',
+    margin: 10,
+    "&:hover": {
+      transform: "scale3d(1.05, 1.05, 1)"
+    },
   },
   cardMedia: {
-    height: '173px',
+    height: '284px',
     backgroundRepeat: 'no-repeat',
     backgroundSize: "contain",
   },
   cardContent: {
-    height: "173px",
+    height: "161px",
   },
   price: {
     display: "flex",
@@ -34,18 +38,11 @@ export default makeStyles(() => ({
   link: {
     cursor: "pointer",
     textDecoration: "none",
-    color: "white",
-    backgroundColor: "#3483FA",
-    padding: 8,
-    borderRadius: 4,
-    "&:hover": {
-      backgroundColor: "#2968C8",
-    },
   },
   linkTypo: {
     marginTop: 25,
   },
   stock: {
-    fontWeight: "bold",
+    fontWeight: "600",
   },
 }));
