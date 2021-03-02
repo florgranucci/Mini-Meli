@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { Navbar, Catalog } from "./components";
 
 export const App = () => {
@@ -55,6 +55,7 @@ export const App = () => {
   
   const handleCategory = (id) => {
     setCategory(id);
+    setCurrentPage(1)
   };
 
   // get products by category
@@ -89,34 +90,25 @@ export const App = () => {
     if (condition === "new" || condition === "used") {
       setCondition(condition);
       setProducts(
-        proConditions.filter((p) => p.condition.indexOf(condition) >= 0)
-      );
+        proConditions.filter((p) => p.condition === condition))
     } else {
       setCondition(condition);
       setProducts(proConditions);
     }
-
   }, [condition]);
 
   // filter by price
   useEffect(() => {
-    setCurrentPage(1);
     setProducts(
       products &&
         products
           .slice()
           .sort((a, b) =>
             price === "ascendent"
-              ? a.price > b.price
-                ? 1
-                : -1
+              ? a.price > b.price ? 1 : -1
               : price === "descendent"
-              ? a.price < b.price
-                ? 1
-                : -1
-              : a.id > b.id
-              ? 1
-              : -1
+              ? a.price < b.price ? 1 : -1
+              : a.id > b.id ? 1 : -1
           )
     );
   }, [price])

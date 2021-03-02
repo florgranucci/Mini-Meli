@@ -57,7 +57,7 @@ const ProductCard = ({ product }) => {
           Stock disponible: {stock} unidades
         </Typography>
         <Typography variant="body1" className={classes.linkTypo}>
-          <a href={link} target="_blank" className={classes.link}>
+          <a href={link} target="_blank" rel="noreferrer" className={classes.link}>
             Ver producto
           </a>
         </Typography>

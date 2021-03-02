@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, Container, Grid } from "@material-ui/core";
+import { AppBar, Toolbar, Container } from "@material-ui/core";
 import useStyles from "./styles";
 
 import Searchbar from "./Searchbar/Searchbar";
@@ -14,8 +14,8 @@ const Navbar = ({ onSearch }) => {
         <Container maxWidth='lg'>
         <Toolbar>
           <div className={classes.title}>
-            <img src={logo} className={classes.logo}/>
-            <img src={mini} className={classes.logo}/>
+            <img alt='logo' src={logo} className={classes.logo}/>
+            <img alt='logo name' src={mini} className={classes.logo}/>
           </div>
           <Searchbar onSearch={onSearch} />
         </Toolbar>

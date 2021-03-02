@@ -16,7 +16,7 @@ import useStyles from "./styles";
 
 const Filter = ({ handleCondition, handlePrice }) => {
   const classes = useStyles();
-  const [dense, setDense] = useState(true);
+  const [dense] = useState(true);
 
   const [open, setOpen] = useState(false);
 
@@ -26,7 +26,7 @@ const Filter = ({ handleCondition, handlePrice }) => {
 
   return (
     <Grid container justify="center" className={classes.root} wrap="wrap">
-      <Grid item xs={6}>
+      <Grid item container xs={6} >
         <List dense={dense} className={classes.list}>
           <div style={{ display: "flex" }}>
             <ListItem
@@ -48,7 +48,7 @@ const Filter = ({ handleCondition, handlePrice }) => {
           </div>
         </List>
       </Grid>
-      <Grid item container xs={5} justify="flex-end">
+      <Grid item container xs={5} justify="flex-end" >
         <List dense={dense} className={classes.collapse}>
           <ListItem button onClick={handleClick}>
             <ListItemText primary="Filtrar por condición" />
