@@ -8,6 +8,7 @@ Se utilizó la API pública de Mercado Libre. Se extrajo publicaciones que se gu
 
 
 ![mini](https://i.imgur.com/HgO46tP.gif)
+
 ```
 ```
 ![mini-meli-1](https://i.ibb.co/nQyxQJW/Capturag.png)
