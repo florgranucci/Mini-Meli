@@ -12,10 +12,6 @@ Se utilizó la API pública de Mercado Libre. Se extrajo publicaciones que se gu
 
 ```
 ```
-![mini-meli-1](https://i.ibb.co/nQyxQJW/Capturag.png)
-```
-```
-![mini-meli-1](https://i.ibb.co/616PKhk/Capturatermos.png)
 
 ### Componentes:
 
