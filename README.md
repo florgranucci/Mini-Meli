@@ -7,11 +7,10 @@ El objetivo de este challenge fue construir un Front-End y un Back-End que inter
 Se utilizó la API pública de Mercado Libre. Se extrajo publicaciones que se guardaron en el back-end usando un caché. Para el Front-end se desarrolló una serie de Componentes de React para poder mostrar e interactuar con las publicaciones antes mencionadas.
 
 
-![mini-meli](https://github.com/florgranucci/Mini-Meli/client/src/assets/cuatro.gif)
-
-![mini-meli-1](https://i.ibb.co/tpw8Fgt/gg.png)
-
-
+![mini-meli-1](https://i.ibb.co/nQyxQJW/Capturag.png)
+```
+```
+![mini-meli-1](https://i.ibb.co/616PKhk/Capturatermos.png)
 
 ### Componentes:
 
