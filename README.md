@@ -8,7 +8,7 @@ Se utilizó la API pública de Mercado Libre. Se extrajo publicaciones que se gu
 
 <img src='https://media.giphy.com/media/NNYnArTx7UvU4jTpe2/giphy.gif' width='500' heigth='500' />
 
-![minimeli](https://media.giphy.com/media/NNYnArTx7UvU4jTpe2/giphy.gif)
+![minimeli](https://giphy.com/gifs/NNYnArTx7UvU4jTpe2/html5)
 ```
 ```
 ![mini-meli-2](https://i.ibb.co/4NRbHsG/inicio.png)
