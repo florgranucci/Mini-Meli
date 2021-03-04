@@ -21,6 +21,8 @@ export const App = () => {
   // get products via searchbar
   const onSearch = (input) => {
     setCurrentPage(1)
+    setCondition('')
+    setPrice('')
     axios
       .get(`${URL}/api/search?q=${input}`)
       .then((res) => {
@@ -60,6 +62,7 @@ export const App = () => {
 
   // get products by category
   useEffect(() => {
+    setPrice('')
      axios
       .get(`${URL}/api/products?category=${category}`)
       .then((res) => {
@@ -87,6 +90,7 @@ export const App = () => {
   // filter by condition
   useEffect(() => {
     setCurrentPage(1);
+    setPrice('')
     if (condition === "new" || condition === "used") {
       setCondition(condition);
       setProducts(
