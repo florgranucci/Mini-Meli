@@ -63,6 +63,7 @@ export const App = () => {
   // get products by category
   useEffect(() => {
     setPrice('')
+    setCondition('')
      axios
       .get(`${URL}/api/products?category=${category}`)
       .then((res) => {
