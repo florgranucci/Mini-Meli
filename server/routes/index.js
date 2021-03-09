@@ -11,9 +11,11 @@ const cache = (duration) => {
         const key = '_express_' + req.originalUrl || req.url;
         const cachedBody = mcache.get(key);
         if(cachedBody) {
+            console.log('cache')
             res.send(cachedBody);
             return;
         }else {
+            console.log('no cache')
             res.sendResponse = res.send;
             res.send = (body) => {
                 mcache.put(key, body, duration * 1000);
@@ -26,7 +28,7 @@ const cache = (duration) => {
 
 // route to get products via search bar
 
-server.get('/search', cache(60), (req, res) => {
+server.get('/search', cache(1800), (req, res) => {
     const { q } = req.query;
 
     axios
@@ -56,7 +58,7 @@ server.get('/search', cache(60), (req, res) => {
 });
 
 // route to get all categories 
-server.get('/categories', cache(60), (req, res) => {
+server.get('/categories', cache(1800), (req, res) => {
     axios
     .get(`https://api.mercadolibre.com/sites/MLA/categories`)
     .then(res => {
@@ -78,7 +80,7 @@ server.get('/categories', cache(60), (req, res) => {
 });
 
 // route to get products by category
-server.get('/products', cache(60), (req, res) => {
+server.get('/products', cache(1800), (req, res) => {
     const { category } = req.query
     axios
     .get(`https://api.mercadolibre.com/sites/MLA/search?category=${category}`)
