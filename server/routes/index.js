@@ -27,7 +27,6 @@ const cache = (duration) => {
 }
 
 // route to get products via search bar
-
 server.get('/search', cache(1800), (req, res) => {
     const { q } = req.query;
 
