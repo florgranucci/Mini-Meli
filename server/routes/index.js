@@ -11,11 +11,9 @@ const cache = (duration) => {
         const key = '_express_' + req.originalUrl || req.url;
         const cachedBody = mcache.get(key);
         if(cachedBody) {
-            console.log('cache')
             res.send(cachedBody);
             return;
         }else {
-            console.log('no cache')
             res.sendResponse = res.send;
             res.send = (body) => {
                 mcache.put(key, body, duration * 1000);

@@ -1,10 +1,10 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router } from 'react-router-dom';
-import { Navbar, Catalog } from "./components";
+import { Navbar, Catalog, Header } from "./components";
 
 export const App = () => {
-  const URL = "http://localhost:5000";
+  const URL = process.env.REACT_APP_URL;
 
   const [products, setProducts] = useState([]);
   const [proConditions, setProConditions] = useState([]);
@@ -20,9 +20,9 @@ export const App = () => {
 
   // get products via searchbar
   const onSearch = (input) => {
-    setCurrentPage(1)
-    setCondition('')
-    setPrice('')
+    setCurrentPage(1);
+    setCondition('');
+    setPrice('');
     axios
       .get(`${URL}/api/search?q=${input}`)
       .then((res) => {
@@ -123,6 +123,7 @@ export const App = () => {
     setCurrentPage(pageNumber);
   };
 
+  //pagination 
   const lastProduct = currentPage * productsPerPage;
   const firstProduct = lastProduct - productsPerPage;
   const allProducts = products.slice(firstProduct, lastProduct);
@@ -136,6 +137,7 @@ export const App = () => {
     <Router>
     <div>
       <Navbar onSearch={onSearch} />
+      <Header />
       <Catalog 
       products={allProducts} 
       categories={categories} 
