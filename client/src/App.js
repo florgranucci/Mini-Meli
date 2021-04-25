@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { Navbar, Catalog, Header } from "./components";
 
 export const App = () => {
-  const URL = process.env.REACT_APP_URL;
+  const URL = 'http://localhost:5000';
 
   const [products, setProducts] = useState([]);
   const [proConditions, setProConditions] = useState([]);
@@ -26,6 +26,7 @@ export const App = () => {
     axios
       .get(`${URL}/api/search?q=${input}`)
       .then((res) => {
+        console.log(res)
         setProducts(res.data);
         setProConditions(res.data);
       })

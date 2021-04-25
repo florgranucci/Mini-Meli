@@ -15,7 +15,7 @@ const Header = () => {
     }
   ];
     return (
-     <Container maxWidth='xl'>
+     <Container maxWidth='lg'>
       <Carousel>
         {items.map((item, i) => (
           <Item key={i} item={item} />
