@@ -10,4 +10,4 @@ app.use(cors());
 app.use('/api', server);
 app.use(morgan('dev'));
 
-app.listen(PORT, () => console.log('Server is running'));
+app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
