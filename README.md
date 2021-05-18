@@ -24,6 +24,7 @@ Su condicion.
 Si tiene stock o no.
 ```
 
+
 **Catalogo**
 Este componente muestra un arreglo de productos usando Product Card. Tambien posibilita:
 ```
